@@ -1,0 +1,210 @@
+.nav_con {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0.8rem 1.5rem;
+}
+
+.side_logoo {
+    background-image: url("./img/logo.jpg");
+    width: 150px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 80%;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    margin-top: 1%;
+    border-radius: 10px;
+    margin-left: 10%;
+
+}
+
+.navbar_transparent {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    box-shadow: none;
+}
+
+.navbar_scrolled {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.navbar_hidden {
+    transform: translateY(-100%);
+}
+
+.navbar_visible {
+    transform: translateY(0);
+}
+
+/* Add these styles to center-align the navigation */
+.nav_item_set {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo_section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav_links_container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_bar_item {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav_icons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav_item_icon {
+    font-size: 1.5rem;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav_item_icon:hover {
+    color: #3a86ff;
+    transform: scale(1.1);
+}
+
+.nav_item_icon_noty {
+    font-size: 1.5rem;
+    color: #ff5a5f;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+}
+
+/* Remove underlines from navigation items */
+.nav_nav_item {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+    padding: 0.3rem 0;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav_links_container a,
+.nav_bar_item p,
+.nav_bar_item a {
+    text-decoration: none;
+}
+
+/* Keep hover effects but without underlines */
+.nav_nav_item:hover {
+    color: #3a86ff;
+    text-decoration: none;
+}
+
+/* Remove underlines from active navigation items */
+.nav_nav_item_active {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+/* Ensure active state still stands out without underlines */
+.nav_nav_item_active {
+    font-weight: bold;
+    color: #4a90e2; /* You can choose any color that matches your design */
+}
+
+.nav_logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.site_name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #3a86ff;
+    letter-spacing: -0.5px;
+}
+
+.nav_profile_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3a86ff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav_profile_img:hover, .nav_profile_icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.3);
+}
+
+.nav_profile_icon {
+    font-size: 1.8rem;
+    color: #3a86ff;
+    background-color: rgba(58, 134, 255, 0.1);
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Styling for navigation link icons */
+.nav_link_icon {
+    margin-right: 5px;
+    vertical-align: middle;
+    font-size: 1.1em;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav_bar_item {
+        gap: 1rem;
+    }
+    
+    .nav_nav_item {
+        font-size: 0.9rem;
+    }
+    
+    .site_name {
+        font-size: 1.5rem;
+    }
+}
