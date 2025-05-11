@@ -202,12 +202,12 @@ public class PostManagementController {
         return ResponseEntity.ok("Media file deleted successfully!");
     }
 
-    @PutMapping("/{postId}/like")
-    public ResponseEntity<PostManagementModel> likePost(@PathVariable String postId, @RequestParam String userID) {
-        return postRepository.findById(postId)
-                .map(post -> {
-                    post.getLikes().put(userID, !post.getLikes().getOrDefault(userID, false));
-                    postRepository.save(post);
+//    @PutMapping("/{postId}/like")
+//    public ResponseEntity<PostManagementModel> likePost(@PathVariable String postId, @RequestParam String userID) {
+//        return postRepository.findById(postId)
+//                .map(post -> {
+//                    post.getLikes().put(userID, !post.getLikes().getOrDefault(userID, false));
+//                    postRepository.save(post);
 
                     // Create a notification for the post owner
                     if (!userID.equals(post.getUserID())) {
