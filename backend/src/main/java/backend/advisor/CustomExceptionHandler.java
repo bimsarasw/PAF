@@ -12,11 +12,11 @@ import java.util.Map;
 public class CustomExceptionHandler {
 
     @ExceptionHandler(ResourceNotFoundException.class)
-//    public Map<String,String> handleResourceNotFoundException(ResourceNotFoundException exception){
-//        Map<String, String> errorMap = new HashMap<>();
-//        errorMap.put("errorMesssage",exception.getMessage());
-//        return errorMap;
-//    }
+    public Map<String,String> handleResourceNotFoundException(ResourceNotFoundException exception){
+        Map<String, String> errorMap = new HashMap<>();
+        errorMap.put("errorMesssage",exception.getMessage());
+        return errorMap;
+    }
 
 
 }
