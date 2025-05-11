@@ -62,6 +62,11 @@ function AddAchievements() {
     setIsDragging(true);
   };
 
+    // const handleDragOver = (e) => {
+    //     e.preventDefault();
+    //     setIsDragging(true);
+    // };
+
   const handleDragLeave = (e) => {
     e.preventDefault();
     setIsDragging(false);
