@@ -4,19 +4,19 @@ import './AddNewPost.css'; // Make sure to include the CSS file
 import GlassLayout from '../../Components/Layout/GlassLayout';
 import { Box } from '@mui/material';
 
-// function AddNewPost() {
-//   const [title, setTitle] = useState('');
-//   const [description, setDescription] = useState('');
-//   const [media, setMedia] = useState([]);
-//   const [mediaPreviews, setMediaPreviews] = useState([]);
-//   const [categories, setCategories] = useState('');
-//   const [isDragging, setIsDragging] = useState(false);
-//   const userID = localStorage.getItem('userID');
-//
-//   const handleMediaChange = (e) => {
-//     const files = Array.from(e.target.files);
-//     processMediaFiles(files);
-//   };
+function AddNewPost() {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [media, setMedia] = useState([]);
+  const [mediaPreviews, setMediaPreviews] = useState([]);
+  const [categories, setCategories] = useState('');
+  const [isDragging, setIsDragging] = useState(false);
+  const userID = localStorage.getItem('userID');
+
+  const handleMediaChange = (e) => {
+    const files = Array.from(e.target.files);
+    processMediaFiles(files);
+  };
 
   const processMediaFiles = (files) => {
     const maxFileSize = 50 * 1024 * 1024; // 50MB
