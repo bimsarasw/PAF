@@ -50,10 +50,10 @@ public class UserController {
     @Autowired
     private PostManagementRepository postManagementRepository; // Inject the repository
 
-    @Autowired
-    private JavaMailSender mailSender; // Add JavaMailSender for sending emails
-
-    private static final String PROFILE_UPLOAD_DIR = "uploads/profile"; // Relative path
+//    @Autowired
+//    private JavaMailSender mailSender; // Add JavaMailSender for sending emails
+//
+//    private static final String PROFILE_UPLOAD_DIR = "uploads/profile"; // Relative path
 
     //Insert
     @PostMapping("/user")
