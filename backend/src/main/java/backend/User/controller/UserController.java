@@ -38,8 +38,8 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-//    @Autowired
-//    private NotificationRepository notificationRepository;
+    @Autowired
+    private NotificationRepository notificationRepository;
 
     @Autowired
     private AchievementsRepository achievementsRepository; // Inject the repository
