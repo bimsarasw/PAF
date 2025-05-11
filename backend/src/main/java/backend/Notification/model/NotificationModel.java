@@ -63,3 +63,44 @@ public class NotificationModel {
         this.createdAt = createdAt;
     }
 }
+
+
+
+
+//
+//
+//public NotificationModel(String userId, String message, boolean read, String createdAt) {
+//    this.userId = userId;
+//    this.message = message;
+//    this.read = read;
+//    this.createdAt = createdAt;
+//}
+//
+//public String getId() {
+//    return id;
+//}
+//
+//public void setId(String id) {
+//    this.id = id;
+//}
+//
+//public String getUserId() {
+//    return userId;
+//}
+//
+//public void setUserId(String userId) {
+//    this.userId = userId;
+//}
+//
+//public String getMessage() {
+//    return message;
+//}
+//
+//public void setMessage(String message) {
+//    this.message = message;
+//}
+//
+//public boolean isRead() {
+//    return read;
+//}
+
