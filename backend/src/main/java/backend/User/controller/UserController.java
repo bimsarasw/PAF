@@ -55,26 +55,26 @@ public class UserController {
 
     private static final String PROFILE_UPLOAD_DIR = "uploads/profile"; // Relative path
 
-//    //Insert
-//    @PostMapping("/user")
-//    public ResponseEntity<?> newUserModel(@RequestBody UserModel newUserModel) {
-//        if (newUserModel.getEmail() == null || newUserModel.getFullname() == null ||
-//            newUserModel.getPassword() == null || newUserModel.getBio() == null || // Validate bio
-//            newUserModel.getSkills() == null) { // Validate skills
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of("message", "Missing required fields."));
-//        }
-//
-//        if (userRepository.existsByEmail(newUserModel.getEmail())) {
-//            return ResponseEntity.status(HttpStatus.CONFLICT).body(Map.of("message", "Email already exists!"));
-//        }
-//
-//        try {
-//            UserModel savedUser = userRepository.save(newUserModel);
-//            return ResponseEntity.status(HttpStatus.CREATED).body(savedUser);
-//        } catch (Exception e) {
-//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of("message", "Failed to save user."));
-//        }
-//    }
+    //Insert
+    @PostMapping("/user")
+    public ResponseEntity<?> newUserModel(@RequestBody UserModel newUserModel) {
+        if (newUserModel.getEmail() == null || newUserModel.getFullname() == null ||
+            newUserModel.getPassword() == null || newUserModel.getBio() == null || // Validate bio
+            newUserModel.getSkills() == null) { // Validate skills
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of("message", "Missing required fields."));
+        }
+
+        if (userRepository.existsByEmail(newUserModel.getEmail())) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(Map.of("message", "Email already exists!"));
+        }
+
+        try {
+            UserModel savedUser = userRepository.save(newUserModel);
+            return ResponseEntity.status(HttpStatus.CREATED).body(savedUser);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of("message", "Failed to save user."));
+        }
+    }
 
     //User Login
     @PostMapping("/login")
