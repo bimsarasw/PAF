@@ -48,7 +48,7 @@ public class UserController {
     private LearningPlanRepository learningPlanRepository; // Inject the repository
 
     @Autowired
-//    private PostManagementRepository postManagementRepository; // Inject the repository
+    private PostManagementRepository postManagementRepository; // Inject the repository
 
     @Autowired
     private JavaMailSender mailSender; // Add JavaMailSender for sending emails
