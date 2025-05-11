@@ -41,8 +41,8 @@ public class UserController {
     @Autowired
     private NotificationRepository notificationRepository;
 
-    @Autowired
-    private AchievementsRepository achievementsRepository; // Inject the repository
+//    @Autowired
+//    private AchievementsRepository achievementsRepository; // Inject the repository
 
     @Autowired
     private LearningPlanRepository learningPlanRepository; // Inject the repository
