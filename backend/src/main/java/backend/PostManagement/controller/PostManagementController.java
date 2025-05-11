@@ -300,3 +300,13 @@ public class PostManagementController {
         return ResponseEntity.status(HttpStatus.PAYLOAD_TOO_LARGE).body("File size exceeds the maximum limit!");
     }
 }
+
+
+
+//PostManagementModel post = new PostManagementModel();
+//        post.setUserID(userID);
+//        post.setTitle(title);
+//        post.setDescription(description);
+//        post.setCategory(category); // Set category
+//        post.setMedia(mediaUrls);
+//
