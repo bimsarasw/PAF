@@ -138,11 +138,3 @@
   transition: background-color 0.3s ease;
 }
 
-.submit-button:hover {
-  background-color: #0056b3;
-}
-
-.submit-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
