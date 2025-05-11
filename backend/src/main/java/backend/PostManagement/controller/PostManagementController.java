@@ -113,21 +113,21 @@ public class PostManagementController {
         return ResponseEntity.ok(post);
     }
 
-    @DeleteMapping("/{postId}")
-    public ResponseEntity<?> deletePost(@PathVariable String postId) {
-        PostManagementModel post = postRepository.findById(postId)
-                .orElseThrow(() -> new ResourceNotFoundException("Post not found: " + postId));
-
-        // Delete associated media files
-        for (String mediaUrl : post.getMedia()) {
-            try {
-                // Resolve the full file path
-                Path filePath = Paths.get(uploadDir, mediaUrl.replace("/media/", ""));
-                Files.deleteIfExists(filePath);
-            } catch (IOException e) {
-                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                        .body("Failed to delete media file: " + mediaUrl);
-            }
+//    @DeleteMapping("/{postId}")
+//    public ResponseEntity<?> deletePost(@PathVariable String postId) {
+//        PostManagementModel post = postRepository.findById(postId)
+//                .orElseThrow(() -> new ResourceNotFoundException("Post not found: " + postId));
+//
+//        // Delete associated media files
+//        for (String mediaUrl : post.getMedia()) {
+//            try {
+//                // Resolve the full file path
+//                Path filePath = Paths.get(uploadDir, mediaUrl.replace("/media/", ""));
+//                Files.deleteIfExists(filePath);
+//            } catch (IOException e) {
+//                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+//                        .body("Failed to delete media file: " + mediaUrl);
+//            }
         }
 
         // Delete the post from the database
