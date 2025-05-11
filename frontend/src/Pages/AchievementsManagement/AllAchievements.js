@@ -376,4 +376,26 @@ function AllAchievements() {
   );
 }
 
+
+//
+// <div className="form-group">
+//     <label className="form-label" style={{ color: '#333', fontWeight: 'bold' }}>Title</label>
+//     <input
+//         className="form-input"
+//         name="title"
+//         placeholder="Enter achievement title"
+//         value={formData.title}
+//         onChange={handleChange}
+//         required
+//         style={{
+//             width: '100%',
+//             padding: '12px',
+//             borderRadius: '8px',
+//             border: '1px solid #ccc',
+//             fontSize: '16px',
+//             boxShadow: 'inset 0 2px 4px rgba(0, 0, 0, 0.1)'
+//         }}
+//     />
+// </div>
+
 export default AllAchievements;
