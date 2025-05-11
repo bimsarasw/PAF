@@ -107,6 +107,8 @@ function AddAchievements() {
             return;
         }
 
+
+        // submitButton
         const submitButton = document.getElementById('submit-button');
         submitButton.disabled = true;
         submitButton.innerText = 'Adding Achievement...';
